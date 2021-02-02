@@ -9,7 +9,7 @@ const assertEqual = function(actual, expected) {
 // start //
 const head = function(arr) {
   return arr[0];
-}
+};
 
 // testing code
 assertEqual(head([5,6,7]), 5);
