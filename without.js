@@ -19,21 +19,36 @@ const assertArraysEqual = function(arr1, arr2) {
 
 // start
 const without = (source, itemsToRemove) => {
-  let result = [];
-  source.forEach((s) => {
-    let add = true;
-    itemsToRemove.forEach((x) =>
-      (s === x) && (add = false)
-    );
-    add && result.push(s);
-  });
+  let result = Object.assign([], source); //clone the source arr, also can code in this way: let result = [...source]
+
+  for (let i in source) {
+    for (let x in itemsToRemove) {
+      if (source[i] === itemsToRemove[x]) {
+        result.splice(i, 1);
+        break;
+      }
+    }
+  }
   return result;
+  // let result = [];
+  // source.forEach((s) => {
+  //   let add = true;
+  //   itemsToRemove.forEach((x) =>{
+  //     if(s === x){
+  //       add = false
+  //     }
+  //   });
+  //   if(add){
+  //     result.push(s)
+  //   }
+  // });
+  // return result;
 };
 
 
 //testing code
-// console.log(without([1, 2, 3], [1]));// => [2, 3]
-// console.log(without(["1", "2", "3"], [1, 2, "3"]));// => ["1", "2"]
+console.log(without([1, 2, 3], [1]));// => [2, 3]
+console.log(without(["1", "2", "3"], [1, 2, "3"]));// => ["1", "2"]
 
 // case 1
 const words = ["hello", "world", "lighthouse"];
