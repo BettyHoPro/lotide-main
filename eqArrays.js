@@ -1,7 +1,5 @@
 //function implementation
 const assertEqual = function(actual, expected) {
-  // console.log(` Arr1: ${actual},${actual.length}`);
-  // console.log(` Arr2: ${expected},${expected.length} `);
   if (actual !== expected) {
     console.log(`💣 💣 💣 Assertion Failed: ${actual} !== ${expected}`);
   } else {
@@ -11,8 +9,6 @@ const assertEqual = function(actual, expected) {
 
 // start
 const eqArrays = function(arr1, arr2) {
-  // console.log(` Arr1: ${arr1},${arr1.length}`);
-  // console.log(` Arr2: ${arr2},${arr2.length} `);
   if (arr1.length !== arr2.length) {
     return false;
   }
