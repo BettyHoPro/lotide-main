@@ -8,7 +8,7 @@ const assertEqual = function(actual, expected) {
 
 // start //
 const tail = function(arrTail) {
-  return arrTail.slice(1); 
+  return arrTail.slice(1);
 };
 
 
