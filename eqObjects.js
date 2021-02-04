@@ -6,6 +6,17 @@ const assertEqual = function(actual, expected) {
   }
 };
 
+const eqArrays = function(arr1, arr2) {
+  if (arr1.length !== arr2.length) {
+    return false;
+  }
+  for (let i in arr1) {
+    if (arr1[i] !== arr2[i])
+      return false;
+  }
+  return true;
+};
+
 // start
 const eqObjects = (obj1, obj2) => {
   // console.log(`obj1 keys: ${Object.keys(obj1)} `);
@@ -15,14 +26,10 @@ const eqObjects = (obj1, obj2) => {
   }
   for (let keyObj in obj1) {
     if (Array.isArray(obj1[keyObj])) {
-      if (obj1[keyObj].length === obj2[keyObj].length) {
-        for (let arrIndex in obj1[keyObj]) {
-          if (obj1[keyObj][arrIndex] !== obj2[keyObj][arrIndex])
-            return false;
-        }
-        return true;
+      if (!eqArrays(obj1[keyObj], obj2[keyObj])) {
+        return false;
       }
-      return false;
+      return true;
     }
     if (obj1[keyObj] !== obj2[keyObj]) {
       return false;
