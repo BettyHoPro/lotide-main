@@ -14,8 +14,19 @@ const eqObjects = (obj1, obj2) => {
     return false;
   }
   for (let keyObj in obj1) {
-    if (obj1[keyObj] !== obj2[keyObj])
+    if (Array.isArray(obj1[keyObj])) {
+      if (obj1[keyObj].length === obj2[keyObj].length) {
+        for (let arrIndex in obj1[keyObj]) {
+          if (obj1[keyObj][arrIndex] !== obj2[keyObj][arrIndex])
+            return false;
+        }
+        return true;
+      }
       return false;
+    }
+    if (obj1[keyObj] !== obj2[keyObj]) {
+      return false;
+    }
   }
   return true;
 };
@@ -36,6 +47,24 @@ const ac = { a: "1", c: "2" };
 eqObjects(ac, ba); // => false
 assertEqual(eqObjects(ac, ba), false);
 
-const dc = { d: "1", c: "2" };
-eqObjects(dc, ba); // => false
-assertEqual(eqObjects(dc, ba), false);
+const dc1 = { d: "1", c: "2" };
+eqObjects(dc1, ba); // => false
+assertEqual(eqObjects(dc1, ba), false);
+
+console.log("======= Step 3 =======");
+const cd = { c: "1", d: ["2", 3] };
+const dc = { d: ["2", 3], c: "1" };
+eqObjects(cd, dc); // => true
+assertEqual(eqObjects(cd, dc), true);
+
+const cd2 = { c: "1", d: ["2", 3, 4] };
+eqObjects(cd, cd2); // => false
+assertEqual(eqObjects(cd, cd2), false);
+
+const cd3 = { c: ["1", 2], d: ["2", 3, 4] };
+eqObjects(cd, cd3); // => false
+assertEqual(eqObjects(cd, cd3), false);
+
+const de = { e: ["1", 2], d: ["2", 3, 4] };
+eqObjects(cd, de); // => false
+assertEqual(eqObjects(cd, de), false);
