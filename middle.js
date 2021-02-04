@@ -23,8 +23,7 @@ const middle = function(arr) {
   if (arr.length < 3) {
     result = [];
   } else if (arr.length % 2 === 0) {
-    result.push(arr[midIndex - 1]);
-    result.push(arr[midIndex]);
+    result.push(arr[midIndex - 1], arr[midIndex]);
   } else {
     result.push(arr[midIndex]);
   }
