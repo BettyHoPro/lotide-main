@@ -7,9 +7,7 @@ const assertEqual = function(actual, expected) {
 };
 
 // start
-const findKey = (obj, callback) => {
-  return Object.keys(obj).filter((item) => callback(obj[item]) && item)[0];
-};
+const findKey = (obj, callback) => Object.keys(obj).filter((item) => callback(obj[item]) && item)[0];
 
 // testing code
 assertEqual(findKey({
