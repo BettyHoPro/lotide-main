@@ -41,3 +41,5 @@ assertArraysEqual(map(["ground", "control", "to"], (x => x.length)),[6,7,2]);
 //   "02": {name: "Tom", high: 165},
 //   "03": {name: "Amy", high: 170}
 // }), ((x, index) => x[index]),["Mick", "Tom", "Amy"]));
+
+module.exports = map;

@@ -9,4 +9,5 @@ console.log(result[0] === 5);
 console.log(result[1] === 13);
 console.log(result[2] === 17);
 
+
 //Math.sqrt(Math.pow(3, 2) + Math.pow(4, 2));
