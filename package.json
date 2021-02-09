@@ -1,6 +1,6 @@
 {
   "name": "@betty_ho_dev/lotide",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A collection of functions library created  for learning purpose during Lighthouse Labs BootCamp",
   "main": "assertArraysEqual.js",
   "directories": {
@@ -26,5 +26,9 @@
   "devDependencies": {
     "chai": "^4.3.0",
     "mocha": "^8.2.1"
+  },
+  "dependencies": {
+    "lotide": "^1.0.1",
+    "my-package": "0.0.0"
   }
 }
