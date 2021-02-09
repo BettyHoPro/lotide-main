@@ -6,7 +6,7 @@ const assertEqual = function(actual, expected) {
   }
 };
 
-// start
+
 const countLetters = (str) => {
   let results = {};
   for (let letter of str.split(" ").join("")) {

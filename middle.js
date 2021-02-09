@@ -1,4 +1,3 @@
-//const eqArrays = require("./eqArrays");
 const middle = function(arr) {
   let midIndex = Math.floor(arr.length / 2);
   let result = [];

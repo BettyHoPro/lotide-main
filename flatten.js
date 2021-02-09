@@ -1,6 +1,4 @@
 //const eqArrays = require("./eqArrays");
-//const assertArraysEqual = require("./assertArraysEqual");
-
 const flatten = function(arr) {
   let result = [];
   arr.forEach((x) => {
