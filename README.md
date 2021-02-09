@@ -40,7 +40,7 @@ The following functions are currently implemented:
 * `map(array, callback)`: Takes in an array and a callback function, loops through the array replace the elements in the same array once they implement the callback function's methods.
 * `middle(arr)`: Takes in an array and return the middle position element in the array.
 * `tail(arr)`: Takes in an array, remove the first element in the array and return the array with remaining elements.
-* `takeUnit(array, callback)`: Takes in an array and a callback function, loops through the array and implement the each element in the callback function, return the true result element into a new array.
+* `takeUnit(array, callback)`: Takes in an array and a callback function, divide the array when the element fit the callback function requirement, return the array that only have the elements before it dividing.
 * `without(source, itemsToRemove)`: Takes in two arrays, one is the resource, one is itemsToRemove, loops through the source array to find and remove the same elements in itemsToRemove array, return the resource array with remaining elements.
 
 ## Test
