@@ -1,7 +1,7 @@
 {
-  "name": "lotide",
+  "name": "@betty_ho_dev/lotide",
   "version": "1.0.0",
-  "description": "",
+  "description": "A collection of functions library created  for learning purpose during Lighthouse Labs BootCamp",
   "main": "assertArraysEqual.js",
   "directories": {
     "test": "test"
