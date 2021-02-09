@@ -11,4 +11,3 @@ const countLetters = (str) => {
 };
 
 module.exports = countLetters;
-
